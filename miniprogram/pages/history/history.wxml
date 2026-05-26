@@ -1,0 +1,27 @@
+<!-- 导航历史 -->
+<view class="container">
+  <view class="header">
+    <text class="title">导航历史</text>
+  </view>
+
+  <view class="empty" wx:if="{{records.length === 0}}">
+    <text class="empty-icon">🗺️</text>
+    <text class="empty-text">暂无导航记录</text>
+    <text class="empty-hint">开始一次 AR 导航后，记录会出现在这里</text>
+  </view>
+
+  <scroll-view scroll-y class="list" wx:else>
+    <view class="record-item" wx:for="{{records}}" wx:key="id">
+      <view class="record-route">
+        <text class="record-from">{{item.originName}}</text>
+        <text class="record-arrow">→</text>
+        <text class="record-to">{{item.destinationName}}</text>
+      </view>
+      <view class="record-meta">
+        <text class="record-distance">{{item.distance}}</text>
+        <text class="record-duration">{{item.duration}}</text>
+        <text class="record-time">{{item.time}}</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>

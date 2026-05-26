@@ -1,0 +1,120 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: var(--color-bg);
+}
+
+.route-summary {
+  padding: 32rpx;
+  background: var(--color-bg-card);
+  margin: 24rpx;
+  border-radius: 20rpx;
+}
+
+.summary-row {
+  display: flex;
+  gap: 48rpx;
+  margin-bottom: 28rpx;
+}
+
+.summary-label {
+  font-size: 24rpx;
+  color: var(--color-text-secondary);
+}
+
+.summary-value {
+  font-size: 40rpx;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.route-endpoints {
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx;
+}
+
+.endpoint {
+  display: flex;
+  align-items: center;
+  gap: 12rpx;
+  font-size: 28rpx;
+}
+
+.dot {
+  font-size: 24rpx;
+}
+
+.dot-start {
+  color: var(--color-primary);
+}
+
+.dot-end {
+  color: var(--color-danger);
+}
+
+.steps-list {
+  flex: 1;
+  padding: 0 24rpx;
+}
+
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20rpx;
+  padding: 24rpx 0;
+  border-bottom: 1rpx solid rgba(255, 255, 255, 0.05);
+}
+
+.step-icon {
+  font-size: 36rpx;
+  width: 52rpx;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.step-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6rpx;
+  flex: 1;
+}
+
+.step-instruction {
+  font-size: 30rpx;
+  line-height: 1.5;
+}
+
+.step-distance {
+  font-size: 24rpx;
+  color: var(--color-text-secondary);
+}
+
+.bottom-bar {
+  display: flex;
+  gap: 20rpx;
+  padding: 24rpx 32rpx;
+  background: var(--color-bg-card);
+}
+
+.btn-outline, .btn-primary {
+  flex: 1;
+  padding: 24rpx;
+  border-radius: 48rpx;
+  font-size: 30rpx;
+  text-align: center;
+  border: none;
+}
+
+.btn-outline {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-text);
+  border: 2rpx solid rgba(255, 255, 255, 0.15);
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #000;
+  font-weight: 600;
+}

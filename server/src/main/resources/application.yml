@@ -1,0 +1,45 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: demoar-server
+  datasource:
+    url: jdbc:mysql://localhost:3306/demoar?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: ${DB_PASSWORD:demoar123}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      idle-timeout: 30000
+
+# MyBatis-Plus 配置
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# 腾讯地图 API
+tencent:
+  map:
+    key: ${TENCENT_MAP_KEY:YOUR_TENCENT_MAP_KEY}
+    base-url: https://apis.map.qq.com
+
+# JWT 配置
+jwt:
+  secret: ${JWT_SECRET:demoar-jwt-secret-change-in-production}
+  expiration: 604800000  # 7 天 (毫秒)
+
+# 微信小程序配置
+wechat:
+  miniapp:
+    appid: ${WECHAT_APPID:YOUR_APPID_HERE}
+    secret: ${WECHAT_SECRET:YOUR_SECRET_HERE}

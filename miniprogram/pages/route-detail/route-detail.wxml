@@ -1,0 +1,49 @@
+<!-- 路线详情页 -->
+<view class="container">
+  <!-- 路线概述 -->
+  <view class="route-summary">
+    <view class="summary-row">
+      <view class="summary-item">
+        <text class="summary-label">距离</text>
+        <text class="summary-value">{{distance}}</text>
+      </view>
+      <view class="summary-item">
+        <text class="summary-label">预计时间</text>
+        <text class="summary-value">{{duration}}</text>
+      </view>
+    </view>
+    <view class="route-endpoints">
+      <view class="endpoint origin">
+        <text class="dot dot-start">●</text>
+        <text>{{originName}}</text>
+      </view>
+      <view class="endpoint destination">
+        <text class="dot dot-end">●</text>
+        <text>{{destinationName}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 步骤列表 -->
+  <scroll-view class="steps-list" scroll-y>
+    <view 
+      class="step-item" 
+      wx:for="{{steps}}" 
+      wx:key="index"
+    >
+      <view class="step-icon">
+        <text>{{item.icon}}</text>
+      </view>
+      <view class="step-content">
+        <text class="step-instruction">{{item.instruction}}</text>
+        <text class="step-distance">{{item.distanceText}}</text>
+      </view>
+    </view>
+  </scroll-view>
+
+  <!-- 底部操作 -->
+  <view class="bottom-bar safe-area-bottom">
+    <button class="btn-outline" bindtap="onBackToMap">返回地图</button>
+    <button class="btn-primary" bindtap="onStartAR">开始AR导航</button>
+  </view>
+</view>

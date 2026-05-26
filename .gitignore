@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+target/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment (contains API keys)
+.env
+*.env.local
+
+# Build output
+dist/
+miniprogram/dist/
+
+# Cache
+__pycache__/
+.hermes/cache/

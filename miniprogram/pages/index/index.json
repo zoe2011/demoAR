@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "search-bar": "/components/search-bar/search-bar"
+  },
+  "navigationBarTitleText": "DemoAR 导航",
+  "disableScroll": true
+}

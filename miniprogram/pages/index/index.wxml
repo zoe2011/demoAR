@@ -1,0 +1,51 @@
+<!-- 首页：地图模式 + 搜索 -->
+<view class="container">
+  <!-- 搜索栏 -->
+  <view class="search-bar">
+    <search-bar 
+      placeholder="搜索目的地" 
+      bind:search="onSearch"
+      bind:select="onPlaceSelect"
+    />
+  </view>
+
+  <!-- 腾讯地图 -->
+  <map
+    id="navMap"
+    class="map"
+    latitude="{{latitude}}"
+    longitude="{{longitude}}"
+    scale="{{scale}}"
+    show-location="{{true}}"
+    markers="{{markers}}"
+    polyline="{{polyline}}"
+    bindmarkertap="onMarkerTap"
+    bindregionchange="onRegionChange"
+  />
+
+  <!-- 底部操作栏 -->
+  <view class="bottom-bar safe-area-bottom">
+    <!-- 路线信息（有路线时显示） -->
+    <view class="route-info" wx:if="{{routeInfo}}">
+      <text class="route-distance">{{routeInfo.distance}}</text>
+      <text class="route-duration">{{routeInfo.duration}}</text>
+    </view>
+
+    <!-- 按钮组 -->
+    <view class="action-buttons">
+      <button class="btn btn-outline" bindtap="onLocateMe">
+        <text class="iconfont">📍</text> 定位
+      </button>
+      <button 
+        class="btn btn-primary" 
+        bindtap="onStartAR" 
+        disabled="{{!hasRoute}}"
+      >
+        <text class="iconfont">🎯</text> AR导航
+      </button>
+    </view>
+  </view>
+</view>
+
+<!-- 搜索组件 -->
+<wxs module="searchBar" src="./search-bar.wxs"></wxs>

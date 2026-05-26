@@ -1,0 +1,30 @@
+<!-- 搜索栏组件 -->
+<view class="search-bar-container">
+  <view class="search-input-wrap">
+    <text class="search-icon">🔍</text>
+    <input
+      class="search-input"
+      placeholder="{{placeholder}}"
+      value="{{keyword}}"
+      bindinput="onInput"
+      bindconfirm="onConfirm"
+      confirm-type="search"
+      focus="{{autoFocus}}"
+    />
+    <text class="clear-btn" wx:if="{{keyword}}" bindtap="onClear">✕</text>
+  </view>
+
+  <!-- 搜索建议 -->
+  <view class="suggestions" wx:if="{{suggestions.length > 0}}">
+    <view
+      class="suggestion-item"
+      wx:for="{{suggestions}}"
+      wx:key="id"
+      bindtap="onSelectSuggestion"
+      data-index="{{index}}"
+    >
+      <text class="sug-name">{{item.name}}</text>
+      <text class="sug-addr">{{item.address}}</text>
+    </view>
+  </view>
+</view>
