@@ -1,0 +1,37 @@
+.hud-container { position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; }
+
+.hud-top { display: flex; justify-content: center; align-items: flex-start; padding-top: 120rpx; gap: 32rpx; }
+
+.compass { display: flex; flex-direction: column; align-items: center; }
+
+.compass-ring {
+  width: 80rpx; height: 80rpx; border-radius: 50%;
+  border: 4rpx solid rgba(0, 212, 170, 0.5);
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.compass-n { font-size: 28rpx; color: var(--color-primary); font-weight: 700; }
+
+.compass-direction { font-size: 24rpx; color: #fff; margin-top: 8rpx; }
+
+.distance-badge {
+  display: flex; align-items: baseline; padding: 16rpx 28rpx;
+  background: rgba(0, 0, 0, 0.55); border-radius: 24rpx;
+  backdrop-filter: blur(10rpx);
+}
+
+.distance-value { font-size: 56rpx; font-weight: 700; color: #fff; }
+
+.distance-unit { font-size: 24rpx; color: rgba(255,255,255,0.6); margin-left: 4rpx; }
+
+.hud-bottom {
+  position: absolute; bottom: 200rpx; left: 0; right: 0;
+  display: flex; justify-content: center;
+}
+
+.instruction-text {
+  background: rgba(0, 212, 170, 0.18); color: var(--color-primary);
+  padding: 16rpx 40rpx; border-radius: 40rpx; font-size: 32rpx;
+  border: 2rpx solid rgba(0, 212, 170, 0.3);
+}

@@ -1,0 +1,17 @@
+.poi-marker { position: absolute; z-index: 50; }
+
+.poi-bubble {
+  position: absolute; transform: translate(-50%, -100%);
+  background: rgba(26, 26, 46, 0.92); border-radius: 16rpx;
+  padding: 12rpx 20rpx; border: 2rpx solid rgba(0, 212, 170, 0.4);
+  backdrop-filter: blur(10rpx); display: flex; align-items: center; gap: 10rpx;
+  white-space: nowrap;
+}
+
+.poi-icon { font-size: 28rpx; }
+
+.poi-info { display: flex; flex-direction: column; }
+
+.poi-name { font-size: 24rpx; font-weight: 600; color: #fff; max-width: 200rpx; overflow: hidden; text-overflow: ellipsis; }
+
+.poi-distance { font-size: 20rpx; color: var(--color-primary); }

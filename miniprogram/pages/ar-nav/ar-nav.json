@@ -1,5 +1,8 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "navigation-hud": "/components/navigation-hud/navigation-hud",
+    "voice-guide": "/components/voice-guide/voice-guide"
+  },
   "navigationStyle": "custom",
   "disableScroll": true,
   "pageOrientation": "portrait"

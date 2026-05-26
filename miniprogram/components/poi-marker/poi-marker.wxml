@@ -1,0 +1,10 @@
+<!-- AR POI 标注（悬浮气泡） -->
+<view class="poi-marker" wx:if="{{visible}}">
+  <view class="poi-bubble" style="left: {{x}}px; top: {{y}}px;">
+    <text class="poi-icon">{{icon}}</text>
+    <view class="poi-info">
+      <text class="poi-name">{{name}}</text>
+      <text class="poi-distance">{{distanceText}}</text>
+    </view>
+  </view>
+</view>

@@ -18,23 +18,19 @@
     disable-scroll="{{true}}"
   />
 
-  <!-- HUD 信息层（顶部） -->
-  <view class="hud-top">
-    <view class="hud-direction">
-      <text class="direction-text">{{currentDirection}}</text>
-    </view>
-    <view class="hud-distance">
-      <text class="distance-value">{{remainDistance}}</text>
-      <text class="distance-unit">m</text>
-    </view>
-  </view>
+  <!-- HUD 信息层 -->
+  <navigation-hud 
+    direction="{{currentDirection}}"
+    remainDistance="{{remainDistance}}"
+    instruction="{{currentInstruction}}"
+  />
 
-  <!-- 指令栏（底部） -->
-  <view class="hud-bottom safe-area-bottom">
-    <view class="instruction-text">{{currentInstruction}}</view>
-    <view class="hud-actions">
-      <button class="btn-exit" bindtap="onExitAR">退出AR</button>
-      <button class="btn-map" bindtap="onSwitchToMap">切换地图</button>
-    </view>
+  <!-- 语音控制 -->
+  <voice-guide muted="{{voiceMuted}}" bind:toggle="onVoiceToggle" />
+
+  <!-- 底部按钮 -->
+  <view class="hud-actions safe-area-bottom">
+    <button class="btn-exit" bindtap="onExitAR">退出AR</button>
+    <button class="btn-map" bindtap="onSwitchToMap">切换地图</button>
   </view>
 </view>

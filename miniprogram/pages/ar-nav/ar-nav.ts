@@ -25,6 +25,7 @@ Page({
     currentDirection: '北',
     remainDistance: 0,
     currentInstruction: '正在初始化 AR...',
+    voiceMuted: false,
   },
 
   // 内部实例
@@ -205,6 +206,16 @@ Page({
       content: '请检查摄像头权限后重试',
       showCancel: false,
     });
+  },
+
+  onVoiceToggle(e: WechatMiniprogram.CustomEvent) {
+    const muted = e.detail.muted;
+    this.setData({ voiceMuted: muted });
+    if (muted) {
+      this._voiceGuide?.disable();
+    } else {
+      this._voiceGuide?.enable();
+    }
   },
 
   onExitAR() { wx.navigateBack(); },

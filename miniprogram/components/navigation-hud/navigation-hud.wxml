@@ -1,0 +1,21 @@
+<!-- 导航 HUD 组件：方向罗盘 + 距离 + 指令 -->
+<view class="hud-container">
+  <!-- 顶部：方向罗盘 -->
+  <view class="hud-top">
+    <view class="compass">
+      <view class="compass-ring">
+        <text class="compass-n">N</text>
+      </view>
+      <text class="compass-direction">{{direction}}</text>
+    </view>
+    <view class="distance-badge">
+      <text class="distance-value">{{remainDistance}}</text>
+      <text class="distance-unit">米</text>
+    </view>
+  </view>
+
+  <!-- 底部：导航指令 -->
+  <view class="hud-bottom">
+    <text class="instruction-text">{{instruction}}</text>
+  </view>
+</view>

@@ -1,0 +1,4 @@
+<!-- 语音播报组件：静音切换按钮 -->
+<view class="voice-toggle" bindtap="onToggle">
+  <text class="voice-icon">{{muted ? '🔇' : '🔊'}}</text>
+</view>
